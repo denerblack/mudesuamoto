@@ -36,5 +36,15 @@
         <text>Entrar</text>
       </controlProperties>
     </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="473" y="367" w="-1" h="-1" measuredW="31" measuredH="28" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>F</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Button" x="516" y="366" w="-1" h="-1" measuredW="31" measuredH="28" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>T</text>
+      </controlProperties>
+    </control>
   </controls>
 </mockup>
