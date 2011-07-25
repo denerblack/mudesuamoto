@@ -1,49 +1,60 @@
-<mockup version="1.0" skin="sketch" measuredW="1016" measuredH="544" mockupW="999" mockupH="533">
+<mockup version="1.0" skin="sketch" measuredW="1257" measuredH="534" mockupW="1250" mockupH="533">
   <controls>
     <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="7" y="1" w="999" h="533" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>A%20Web%20Page%0Ahttp%3A//</text>
+        <text>Mude%20sua%20Moto%0Ahttp%3A//mudesuamoto.com.br</text>
       </controlProperties>
     </control>
-    <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="10" y="69" w="992" h="180" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1"/>
-    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="406" y="122" w="-1" h="-1" measuredW="69" measuredH="23" zOrder="2" locked="false" isInGroup="-1">
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="406" y="122" w="-1" h="-1" measuredW="69" measuredH="23" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Banner.jpg</text>
       </controlProperties>
     </control>
-    <control controlID="3" controlTypeID="com.balsamiq.mockups::TextInput" x="453" y="294" w="147" h="-1" measuredW="79" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::TextInput" x="453" y="294" w="147" h="-1" measuredW="79" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <text/>
       </controlProperties>
     </control>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::TextInput" x="453" y="329" w="147" h="-1" measuredW="79" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::TextInput" x="453" y="329" w="147" h="-1" measuredW="79" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
         <text/>
       </controlProperties>
     </control>
-    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="391" y="295" w="-1" h="-1" measuredW="47" measuredH="23" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="391" y="295" w="-1" h="-1" measuredW="47" measuredH="23" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
         <text>usu%E1rio</text>
       </controlProperties>
     </control>
-    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="398" y="330" w="-1" h="-1" measuredW="39" measuredH="23" zOrder="6" locked="false" isInGroup="-1">
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="398" y="330" w="-1" h="-1" measuredW="39" measuredH="23" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
         <text>senha</text>
       </controlProperties>
     </control>
-    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="403" y="367" w="-1" h="-1" measuredW="63" measuredH="28" zOrder="7" locked="false" isInGroup="-1">
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="403" y="367" w="-1" h="-1" measuredW="63" measuredH="28" zOrder="6" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Entrar</text>
       </controlProperties>
     </control>
-    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="473" y="367" w="-1" h="-1" measuredW="31" measuredH="28" zOrder="8" locked="false" isInGroup="-1">
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::StickyNote" x="1037" y="159" w="220" h="102" measuredW="109" measuredH="123" zOrder="7" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>F</text>
+        <text>1%20-%20Autenticar%20via%20facebook%0A2%20-%20Autenticar%20via%20twitter</text>
       </controlProperties>
     </control>
-    <control controlID="9" controlTypeID="com.balsamiq.mockups::Button" x="516" y="366" w="-1" h="-1" measuredW="31" measuredH="28" zOrder="9" locked="false" isInGroup="-1">
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Image" x="10" y="68" w="992" h="173" measuredW="77" measuredH="79" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>T</text>
+        <text>Banner</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Image" x="482" y="367" w="30" h="27" measuredW="38" measuredH="38" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../../../Downloads/WPZOOM_Social_Media_icons/png/38px/_0048_Facebook.png</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Image" x="534" y="367" w="30" h="27" measuredW="38" measuredH="38" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../../../Downloads/WPZOOM_Social_Media_icons/png/38px/_0046_Twitter.png</src>
+        <text/>
       </controlProperties>
     </control>
   </controls>
