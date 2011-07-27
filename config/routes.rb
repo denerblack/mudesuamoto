@@ -1,4 +1,6 @@
 Mudesuamoto::Application.routes.draw do
+  get "home/index"
+
   match "login" => "pages#index"
 
   # get "sessions/create"

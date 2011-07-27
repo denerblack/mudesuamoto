@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+biz:
+  name: Biz
+  brand_id: 1
+
+cg:
+  name: Titan
+  brand_id: 1
+
+fazer:
+  name: Fazer
+  brand_id: 2
