@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR"> 
+<head> 
+<meta http-equiv="Content-Language" content="pt-br" />
+<title>Home</title>
+<meta charset="utf-8">
+<%= javascript_include_tag :defaults %>
+<%= stylesheet_link_tag 'reset.css','layout.css', 'style.css' %>
+<%= javascript_include_tag "jquery-1.4.2.js","cufon-yui.js", "cufon-replace.js", "Myriad_Pro_600.font.js", :cache => true %>
+<script language="javascript" type="text/javascript">
+    $j = jQuery.noConflict();
+</script>
+<script>
+$j(function() {
+
+  $j.ajaxSetup({
+    beforeSend: function(xhr) {
+      xhr.setRequestHeader("Accept", "text/javascript");
+    }
+  });
+
+});
+</script>
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="http://info.template-help.com/files/ie6_warning/ie6_script_other.js"></script>
+	<script type="text/javascript" src="js/html5.js"></script>
+<![endif]-->
+</head>
+<body id="page1">
+<div class="extra">
+	<div class="main">
+<!-- header -->
+		<header>
+			<div class="wrapper">
+				<h1><a href="index.html" id="logo">Around the World</a></h1>
+				<div class="right">
+					<div class="wrapper">
+						<form id="search" action="" method="post">
+							<div class="bg">
+								<input type="submit" class="submit" value="">
+								<input type="text" class="input">
+							</div>
+						</form>
+					</div>
+					<div class="wrapper">
+						<nav>
+							<ul id="top_nav">
+								<li><a href="#">Register</a></li>
+								<li><a href="#">Log In</a></li>
+								<li><a href="#">Help</a></li>
+							</ul>
+						</nav>
+					</div>	
+				</div>
+			</div>
+			<nav>
+				<ul id="menu">
+					<li><a href="index.html" class="nav1">Home</a></li>
+					<li><a href="About.html" class="nav2">Perfil </a></li>
+					<li><a href="Tours.html" class="nav3">Ofertas</a></li>
+					<li><a href="Destinations.html" class="nav4">Lojas</a></li>
+					<li class="end"><a href="Contacts.html" class="nav5">Ofertas</a></li>
+				</ul>
+			</nav>
+			<article class="col1">
+				<%= yield :filter %>
+				
+				</div>
+			</article>
+			<article class="col1 pad_left1">
+				<%= yield :show %>
+				
+			</article>
+		
+		</header><div class="inner_copy">More <a href="http://www.templatemonster.com/">Website Templates</a> at TemplateMonster.com!</div>
+<!-- / header -->
+<!-- content -->
+		<section id="content">
+			<%=yield :content%>
+			
+		</section>
+<!-- / content -->
+	</div>
+	<div class="block"></div>
+</div>
+<div class="body1">
+	<div class="main">
+<!-- footer -->
+		<footer>
+			<a href="http://www.templatemonster.com/" target="_blank">Website template</a> designed by TemplateMonster.com<br>
+			<a href="http://www.templates.com/product/3d-models/" target="_blank">3D Models</a> provided by Templates.com
+		</footer>
+<!-- / footer -->
+	</div>
+</div>
+<script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>

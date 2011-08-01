@@ -1,0 +1,4 @@
+<div id="select_year">
+	<%= label_tag :years, t('year')%>
+	<%= select_tag :years,options_from_collection_for_select(@model.years,"id","year"), {:include_blank => t('select'), :class => 'select'}%>
+</div>

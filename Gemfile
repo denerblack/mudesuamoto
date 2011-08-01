@@ -14,6 +14,8 @@ gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 
 gem 'mongrel', '>= 1.2.0.pre2'
 
+gem 'jquery-rails', '>= 0.2.6'
+
 
 group :development, :test do
   	gem 'rspec'

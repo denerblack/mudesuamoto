@@ -1,0 +1,12 @@
+<div id="select_model">
+	<%= label_tag :models, t('model')%>
+	<%= select_tag :models,options_from_collection_for_select(@brand.models,"id","name"), {:include_blank => t('select'), :class => 'select'}%>
+</div>
+<script language="javascript" type="text/javascript">
+	$j(document).ready(function() {
+		$j("#models").change(function() {
+			$j.get("home/filter_years/"+this.value);			
+		});
+		
+	});
+</script>

@@ -1,5 +1,10 @@
 Mudesuamoto::Application.routes.draw do
-  get "home/index"
+  match "home" => "home#index"
+  match "/" => "home#index"
+  match 'home/filter_years/:id', :controller=>'home', :action => 'filter_years'
+  match 'home/filter_models/:id', :controller=>'home', :action => 'filter_models'
+
+  # match "search" => "home#search"
 
   match "login" => "pages#index"
 

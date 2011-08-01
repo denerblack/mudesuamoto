@@ -1,0 +1,57 @@
+<% content_for :filter do %>
+<ul class="tabs">
+	<li><a href="#" class="active"><%=t('choice_your_motorcycle')%></a></li>
+	<li><a href="#">Hotel</a></li>
+	<li><a href="#">Car</a></li>
+	<!-- <li class="end"><a href="#">Cruise</a></li> -->
+</ul>
+<div class="tabs_cont">					
+	<%= form_tag("/search", :id => 'form_1') do %>
+	  	<div class="wrapper">
+			<%= label_tag :brands, t('brand')%>
+			<%= select_tag :brands,options_from_collection_for_select(@brands,"id","name"), {:include_blank => t('select'), :class => 'select'}%><br/>
+			<%= render :partial => 'select_model' %>
+			<%= render :partial => 'select_year' %>
+
+			
+		</div>
+	<% end -%>
+	<!--form id="form_1" action="" method="post">
+		<div class="bg">
+			<div class="wrapper">
+				<div class="radio">
+					<input type="radio" name="name1" checked>Round trip
+				</div>
+				<div class="radio"><input type="radio" name="name1">One way</div>
+			</div>
+			<a href="#">Multiple destinations</a>
+			<div class="wrapper"><input type="text" class="input">From</div>
+			<div class="wrapper"><input type="text" class="input">To</div>	
+			<div class="wrapper check_box"><input type="checkbox" checked ><a href="#">Search nearby airports</a></div>	
+			<div class="wrapper"><input type="text" class="input input2" value="04/11/2010"  onblur="if(this.value=='') this.value='04/11/2010'" onfocus="if(this.value =='04/11/2010' ) this.value=''">Depart (mm/dd/yy)</div>
+			<div class="wrapper pad_bot1"><input type="text" class="input input2" value="04/11/2010"  onblur="if(this.value=='') this.value='04/11/2010'" onfocus="if(this.value =='04/11/2010' ) this.value=''">Return  (mm/dd/yy)</div>
+			<div class="wrapper">
+				<div class="radio"><input type="radio" name="name2" checked>Economy cabin</div>
+				<div class="radio end"><input type="radio" name="name2">Business</div>
+			</div>
+			<div class="wrapper pad_bot1">
+				<a href="#" class="button" onclick="document.getElementById('form_1').submit()">Search</a>
+				Audlts <select><option>1</option></select>
+			</div>
+		</div>							
+	</form -->
+<script language="javascript" type="text/javascript">
+	$j(document).ready(function() {
+		$j("#models").change(function() {
+			$j.get("home/filter_years/"+this.value);			
+		});
+		$j("#brands").change(function() {
+			$j.get("home/filter_models/"+this.value);
+		});
+		
+	});
+	function update_years(value) {
+		$j.get("home/filter_years/"+value);
+	}
+</script>
+<%end%>

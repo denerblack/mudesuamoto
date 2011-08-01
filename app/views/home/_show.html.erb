@@ -1,0 +1,11 @@
+<% content_for :show do %>
+<div class="text">
+	<div class="img"><img src="images/yamaha1.png" alt=""></div>
+</div><br/>
+<div id="form_change">
+	<% form_tag("/search", :id => "form_show") do %>
+		<%= label_tag :changes, t('select_your_motorcycle_change')%>
+		<%= select_tag :changes,options_from_collection_for_select(@brands,"id","name"), {:include_blank => t('select'), :class => 'select'}%><br/> 	
+		<% end -%>
+</div>
+<%end%>
