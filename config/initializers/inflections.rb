@@ -9,5 +9,5 @@
 #   inflect.uncountable %w( fish sheep )
 # end
 ActiveSupport::Inflector.inflections do |inflect|
-  inflect.irregular 'model_year', 'models_years'
+  # inflect.irregular 'model_year', 'models_years'
 end

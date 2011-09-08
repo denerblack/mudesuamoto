@@ -1,0 +1,7 @@
+pneu_dianteiro:
+    name: Pneu Dianteiro
+    description: Pneu dianteiro
+    
+pneu_traseiro:
+    name: Pneu Traseiro
+    description: Pneu traseiro

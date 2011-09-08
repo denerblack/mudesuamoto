@@ -15,11 +15,16 @@ gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'mongrel', '>= 1.2.0.pre2'
 
 gem 'jquery-rails', '>= 0.2.6'
+gem 'brazilian-rails'
+gem 'hpricot'
 
 
 group :development, :test do
-  	gem 'rspec'
+  gem 'rspec'
 	gem 'rspec-rails'
+	gem 'rcov'
+	gem 'factory_girl'
+	gem 'factory_girl_rails'
 end
 
 

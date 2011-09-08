@@ -1,3 +1,4 @@
 class Year < ActiveRecord::Base
-  has_and_belongs_to_many :models
+  has_many :models_years
+  has_many :models, :through => :models_years
 end

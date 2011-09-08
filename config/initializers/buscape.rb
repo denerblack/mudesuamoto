@@ -1,0 +1,1 @@
+Mudesuamoto::Application.config.buscape_token = '4b52547a4854315a704e453d'

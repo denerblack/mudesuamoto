@@ -1,0 +1,7 @@
+pneu_dianteiro:
+    name: Troca de Pneu
+    description: Troca de Pneu Dianteiro
+    
+pneu_traseiro:
+    name: Troca de Pneu
+    description: Troca de Pneu Traseiro

@@ -14,17 +14,12 @@ class HomeController < ApplicationController
   
   def filter_models
     @brand = Brand.find(params[:id])
-    respond_to do |f|
-      f.js
-    end
-    # render :action => "filter_models.js.rb"
+    respond_with @brand
   end
   
   def filter_years
     @model = Model.find(params[:id])
-    respond_to do |f|
-      f.js
-    end
+    respond_with @model
   end
       
 end

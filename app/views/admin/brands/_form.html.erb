@@ -1,0 +1,54 @@
+<style type="text/css">
+#error_explanation
+  {
+  height:80px;
+  top: 1;
+  background-color:black;
+  border:1px solid black;
+  padding: -1px;
+  color: white;
+  /* for IE */
+  filter:alpha(opacity=60);
+  /* CSS3 standard */
+  opacity:0.5;
+  }
+</style>
+<%= form_for @brand, :url => local_assigns[:action] do |f| %>
+  <% if @brand.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@brand.errors.count, t('error')) %>encontrado</h2>
+
+      <ul>
+      <% @brand.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %> 
+
+<script language="javascript" type="text/javascript">
+<% if @brand.errors.any? %>
+<% 
+	errors = <<ERR 
+	<div id="error_explanation">
+      #{"<h2>" + pluralize(@brand.errors.count, "error") + "prohibited this admin_brand from being saved:</h2>"}
+      <ul>
+      #{@brand.errors.full_messages.each{|msg|"<li>" + msg[0] + "</li>"}}
+      </ul>
+    </div>
+ERR
+%>
+$('#error-message').html("<%= escape_javascript(errors) %>");
+$('#error-message').show();
+<% else %>
+$('#error-message').hide();
+<% end %>
+</script>
+
+
+  <div class="actions">
+	<%= f.label :name, "Name" %>
+	<%= f.text_field :name %>
+    <%= f.submit %>
+  </div>
+<% end %>

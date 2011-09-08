@@ -1,0 +1,25 @@
+<h1>Listing models</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Brand</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @models.each do |model| %>
+  <tr>
+    <td><%= model.name %></td>
+    <td><%= model.brand_id %></td>
+    <td><%= link_to 'Show', admin_model_path(model) %></td>
+    <td><%= link_to 'Edit', edit_admin_model_path(model) %></td>
+    <td><%= link_to 'Destroy', admin_model_path(model), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Model', new_admin_model_path %>

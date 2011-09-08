@@ -1,0 +1,73 @@
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script language="javascript" type="text/javascript">
+	var geocoder;
+	var map;
+	
+	$(document).ready(function(){
+		geocoder = new google.maps.Geocoder();
+		    var latlng = new google.maps.LatLng(-20.4435053, -54.64775909999997);
+		    var myOptions = {
+		      zoom: 12,
+		      center: latlng,
+		      mapTypeId: google.maps.MapTypeId.ROADMAP
+		    }
+		    map = new google.maps.Map($("#map_canvas").get(0), myOptions);
+	});
+	
+	function codeAddress() {
+	    var address = $("#address").val();
+	    geocoder.geocode( { 'address': address}, function(results, status) {
+	      if (status == google.maps.GeocoderStatus.OK) {
+	        geometry = results[0].geometry;
+			map.setCenter(geometry.location);			
+			setPositionInputs(geometry);
+			setStaticMap(geometry);			
+	        var marker = new google.maps.Marker({
+	            map: map,
+	            position: geometry.location
+	        });
+	      } else {
+	        alert("Geocode was not successful for the following reason: " + status);
+	      }
+		  function setPositionInputs(geometry) {
+			$("#latitude").val(geometry.location.Oa);
+			$("#longitude").val(geometry.location.Pa);
+		  }
+		  function setStaticMap(geometry) {
+			img = "http://maps.google.com/maps/api/staticmap?center="+geometry.location+"&markers="+geometry.location+"&zoom=14&size=380x210&maptype=roadmap&sensor=false";
+			$("#static_map").attr("src",img);
+		  }
+	    });
+	}
+	
+</script>
+<div id="map_canvas" style="width: 320px; height: 480px;"></div>
+  <div>
+    <input id="address" type="textbox" value="Campo Grande, Brazil">
+	<input id="latitude" type="textbox" >
+	<input id="longitude" type="textbox">
+    <input type="button" value="Encode" onclick="codeAddress()">
+  </div>
+  <img id="static_map"> </img>
+
+
+<div><h1>Listing admin_brands</h1></div>
+<div>
+<table>
+  <tr>
+    <th><%=t('name')%></th>
+    <th colspan=3>Açoes</th>
+  </tr>
+<% @brands.each do |brand| %>
+  <tr>
+    <td><%=brand.name%> </td>
+	<td><%= link_to 'Show', admin_brand_path(brand) %></td>
+    <td><%= link_to 'Edit', edit_admin_brand_path(brand) %></td>
+    <td><%= link_to 'Destroy', admin_brand_path(brand), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<br />
+
+<%= link_to 'New Brand', new_admin_brand_path %>

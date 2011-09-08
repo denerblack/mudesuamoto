@@ -1,3 +1,5 @@
 class Model < ActiveRecord::Base
-  has_and_belongs_to_many :years
+  belongs_to :brand
+  has_many :models_years
+  has_many :years, :through => :models_years
 end

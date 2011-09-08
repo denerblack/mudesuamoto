@@ -1,8 +1,7 @@
 class CreateModelsYears < ActiveRecord::Migration
-  def self.up   
-   create_table :models_years,:id => false do |t|
-      t.integer :model_id
-      t.integer :year_id
+  def self.up
+    create_table :models_years do |t|
+      t.references :model, :year
       t.timestamps
     end
   end
