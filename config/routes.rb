@@ -1,7 +1,8 @@
 Mudesuamoto::Application.routes.draw do
-  get "landing_page/index"
-
-  get "landing_page/create"
+  # get "landing_page/index"
+  # 
+  # get "landing_page/create"
+  resources :landing_page
 
   match "home" => "home#index"
   # match "/" => "home#index"

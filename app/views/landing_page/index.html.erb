@@ -1,3 +1,12 @@
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+	$(document).ready(function(){
+		message = "if (this.value == '') {this.value = 'Clique aqui e cadastre seu e-mail para ficar por dentro de nossas novidades';}";
+		$("#landing_page_email").attr("onblur",message);
+		$("#landing_page_email").attr("value",'Clique aqui e cadastre seu e-mail para ficar por dentro de nossas novidades');
+		$("#landing_page_email").attr("onfocus","if (this.value == 'Clique aqui e cadastre seu e-mail para ficar por dentro de nossas novidades') {this.value = '';}");
+	});
+</script>
 <div id="title">
 		<h2>Do que se trata?</h2>
 		<p class="lastNode">O objetivo do &ldquo;Mude sua Moto&rdquo; é centralizar produtos e serviços através de uma busca filtrada pelo usuário. E Dando a oportunidade do usuário fazer uma pesquisa completa de valores e serviços e empresas, mesmo pequenas, a conseguirem um alcance maior.
@@ -7,7 +16,7 @@
 	</p>
 </div>
 <div id="twitter">
-	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+	
 	<script>
 	new TWTR.Widget({
 	  version: 2,
@@ -81,3 +90,11 @@
 			<p class="lastNode">Contudo, ainda precisamos do apoio do público e de usuários em potencial para descobrirmos se esse projeto deve mesmo ser levado adiante. Portanto deixe sua contribuição divulgando nas redes sociais (no topo dessa página) e também deixando o email para eventuais notificações sobre o mudesuamoto.com.br.
 		</p>
 	</div>
+	
+	<div id="form">
+	<%= form_for @landing_page, :url => {:action => :create} do |f| -%>
+	 	<%= f.text_field :email, :size => "90" %>
+		<%= f.submit "Enviar", :disable_with => 'Enviando...' %>
+	<% end -%>
+	</div>
+	
