@@ -1,3 +1,22 @@
+<script>
+	hash_part = <%=@parts%>;
+	$(document).ready(function() {
+		// hash_part = [{"label":"hash_part","id":1},{"label":"hash_part1","id":1}] // 
+		// alert(hash_part);
+		$("input#suggest_part").autocomplete({			
+			source: hash_part,
+			parameters:{'id':'label'},
+			select: function(event, ui) {
+				$("#parts_").append(new Option(ui.item.label,ui.item.id,true,true));
+				// delete hash_part[ui.item.id];
+				// alert(hash_part);
+			}
+		});
+		$("select option").each(function () {
+		   $(this).attr("selected","selected");
+		 });
+	});
+</script>
 <%= form_for @service, :url => local_assigns[:action]  do |f| %>
   <% if @service.errors.any? %>
     <div id="error_explanation">
@@ -19,6 +38,10 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
+	<%= text_field :suggest, :part %>
+	<div>
+	<%= select_tag("parts[]",options_from_collection_for_select(@service.parts,"id","name"), :multiple => true)%>
+	</div>
   <div class="actions">
     <%= f.submit %>
   </div>

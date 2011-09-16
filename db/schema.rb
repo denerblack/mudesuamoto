@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110908221116) do
+ActiveRecord::Schema.define(:version => 20110915193553) do
 
   create_table "authentications", :force => true do |t|
     t.string   "provider"
@@ -37,6 +37,12 @@ ActiveRecord::Schema.define(:version => 20110908221116) do
     t.string   "file_content_type"
     t.integer  "file_file_size"
     t.datetime "file_updated_at"
+  end
+
+  create_table "landing_pages", :force => true do |t|
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "models", :force => true do |t|

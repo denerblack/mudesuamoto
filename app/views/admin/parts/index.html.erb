@@ -11,8 +11,8 @@
 
 <% @parts.each do |part| %>
   <tr>
-    <td><%= admin_part.name %></td>
-    <td><%= admin_part.description %></td>
+    <td><%= part.name %></td>
+    <td><%= part.description %></td>
     <td><%= link_to 'Show', admin_part_path(part) %></td>
     <td><%= link_to 'Edit', edit_admin_part_path(part) %></td>
     <td><%= link_to 'Destroy', admin_part_path(part), :confirm => 'Are you sure?', :method => :delete %></td>

@@ -1,7 +1,9 @@
 pneu_dianteiro:
+    id: 2
     name: Pneu Dianteiro
     description: Pneu dianteiro
     
 pneu_traseiro:
+    id: 3
     name: Pneu Traseiro
     description: Pneu traseiro

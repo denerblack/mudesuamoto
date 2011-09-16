@@ -1,8 +1,14 @@
 Mudesuamoto::Application.routes.draw do
+  get "landing_page/index"
+
+  get "landing_page/create"
+
   match "home" => "home#index"
-  match "/" => "home#index"
+  # match "/" => "home#index"
+  match "/" => "landing_page#index"
   match 'home/filter_years/:id', :controller=>'home', :action => 'filter_years'
   match 'home/filter_models/:id', :controller=>'home', :action => 'filter_models'
+  match 'admin/services/add_part/:part_id', :controller=>'admin/services', :action => 'add_part'
 
   # match "search" => "home#search"
 

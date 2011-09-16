@@ -31,16 +31,27 @@ class Admin::ServicesController < ApplicationController
       format.xml  { render :xml => @service }
     end
   end
+  
+  def suggest_parts
+    @parts = Part.all
+    respond_with @parts
+  end
 
   # GET /admin/services/1/edit
   def edit
     @service = Service.find(params[:id])
+    # @parts = Part.where('id NOT IN (?)',ServicesPart.find_by_service_id(1)).all
+    @parts = Array.new   
+    # @parts = Part.all.collect{|part| @parts << part.hash_part}[0].to_json.html_safe
+    parts = Part.where('id NOT IN (?)',ServicesPart.find_by_service_id(@service.id)).all
+    @parts = (parts.empty? ? Part.all : parts).collect{|part| @parts << part.hash_part}[0].to_json.html_safe
+    # puts @parts
   end
 
   # POST /admin/services
   # POST /admin/services.xml
   def create
-    @service = Service.new(params[:admin_service])
+    @service = Service.new(params[:service])
 
     respond_to do |format|
       if @service.save
@@ -60,6 +71,7 @@ class Admin::ServicesController < ApplicationController
 
     respond_to do |format|
       if @service.update_attributes(params[:service])
+        @service.add_parts(params[:parts])
         format.html { redirect_to(admin_service_path(@service), :notice => 'Service was successfully updated.') }
         format.xml  { head :ok }
       else
@@ -68,7 +80,7 @@ class Admin::ServicesController < ApplicationController
       end
     end
   end
-
+  
   # DELETE /admin/services/1
   # DELETE /admin/services/1.xml
   def destroy

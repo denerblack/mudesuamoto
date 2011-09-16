@@ -20,6 +20,7 @@ require 'spec_helper'
 
 describe Admin::ServicesController do
   fixtures :services
+  fixtures :parts
 
   # This should return the minimal set of attributes required to create a valid
   # Service. As you add validations to Service, be sure to

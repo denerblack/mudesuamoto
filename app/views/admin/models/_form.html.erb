@@ -21,6 +21,7 @@
     <%= f.label :brand_id %><br />
 	<%= select :model, :brand_id,@brands.collect{|brand| [brand.name, brand.id]}, {:include_blank => t('select'), :class => 'select'}%>
   </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
