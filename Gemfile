@@ -8,6 +8,7 @@ gem 'rails', '3.0.9'
 gem 'sqlite3'
 
 gem 'omniauth', '~> 0.2.5'
+gem 'rack', '~> 1.2.1'
 gem 'mysql'
 gem 'ruby-debug19'
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
